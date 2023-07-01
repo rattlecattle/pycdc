@@ -59,7 +59,7 @@ std::string PycLong::repr() const
     // arbitrary-length integers to a power of two than an arbitrary base
 
     if (m_size == 0)
-        return "0x0L";
+        return "0";
 
     // Realign to 32 bits, since Python uses only 15
     std::vector<unsigned> bits;
@@ -90,9 +90,17 @@ std::string PycLong::repr() const
     aptr += snprintf(aptr, 9, "%X", *iter++);
     while (iter != bits.rend())
         aptr += snprintf(aptr, 9, "%08X", *iter++);
-    *aptr++ = 'L';
+    // *aptr++ = 'L';
     *aptr = 0;
-    return accum;
+
+    long long num = std::stoll(&accum[0], nullptr, 0);
+
+    std::string result;
+    result.resize(32);
+    sprintf(&result[0], "%lld", num);
+    return result;
+
+    // return accum;
 }
 
 
