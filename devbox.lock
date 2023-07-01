@@ -1,0 +1,21 @@
+{
+  "lockfile_version": "1",
+  "packages": {
+    "cmake@latest": {
+      "last_modified": "2023-05-25T03:54:59Z",
+      "resolved": "github:NixOS/nixpkgs/8d4d822bc0efa9de6eddc79cb0d82897a9baa750#cmake",
+      "version": "3.25.3"
+    },
+    "python@3.11.3": {
+      "last_modified": "2023-05-25T03:54:59Z",
+      "plugin_version": "0.0.1",
+      "resolved": "github:NixOS/nixpkgs/8d4d822bc0efa9de6eddc79cb0d82897a9baa750#python311",
+      "version": "3.11.3"
+    },
+    "zig@latest": {
+      "last_modified": "2023-05-25T03:54:59Z",
+      "resolved": "github:NixOS/nixpkgs/8d4d822bc0efa9de6eddc79cb0d82897a9baa750#zig",
+      "version": "0.10.1"
+    }
+  }
+}
